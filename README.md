@@ -106,6 +106,10 @@ There are in total 19 DAX calculations in this dashboard, I would not like to ex
 
 #### **Driver Licenses Dataset**
 
+<details>
+<img width="349" height="242" alt="image" src="https://github.com/user-attachments/assets/b69137fe-2bc7-4c13-a558-ea219b0832b3" />
+</details>
+
 `Selected Year`: The first two slides were configured to always be inizialized in 2025 because it displays metrics such as `Total Licenses`, or `YoY License Growth`. In both cases is necesary to started with a Filter applied because
 the SUM(`Licenses`) is the sum of all six years, and YoY metric needs to be inizialized in determined year to be able to compare year to year, if not it will display a (blank).
 
@@ -113,29 +117,32 @@ the SUM(`Licenses`) is the sum of all six years, and YoY metric needs to be iniz
 <img width="1240" height="109" alt="image" src="https://github.com/user-attachments/assets/bf5176f8-e38f-44df-9561-617f6bb4fd14" />
 </details>
 
-`
-
-<details>
-<img width="349" height="242" alt="image" src="https://github.com/user-attachments/assets/b69137fe-2bc7-4c13-a558-ea219b0832b3" />
-</details>
 
 #### **Traffic Citations Dataset**
+
+`Total Licenses`: Since grand totals from the original dataset were ruled out, to calculate the sum of total licenses we have to make a new measure of the sum of every enforcement department.
+
+<details>
+<img width="407" height="109" alt="image" src="https://github.com/user-attachments/assets/4b22b6d5-3b34-4663-8faf-54d3fdd3eeb3" />
+</details>
 
 <details>
 <img width="356" height="265" alt="image" src="https://github.com/user-attachments/assets/300f97a9-ad6a-44fb-9923-258546178f31" />
 </details>
+
+
 ### 📊 Visualization
 ---
 
 - Produced a 4-Tabs dashboard using Power BI
   
-![Visual1](https://github.com/user-attachments/assets/098cb444-0e96-413d-9d76-7bb4f5b11ae4)
+
 ---
-![Visual2](https://github.com/user-attachments/assets/23ffee15-09e0-4ad7-83f6-b983a0783986)
+
 ---
-![Visual3](https://github.com/user-attachments/assets/6a8ccdd0-0621-4562-9775-83e8d42da898)
+
 ---
-![Visual4](https://github.com/user-attachments/assets/ca7972b2-dceb-426a-ba06-cae7d0ef5161)
+
 ---
 
 
