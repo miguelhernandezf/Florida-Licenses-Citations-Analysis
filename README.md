@@ -100,9 +100,33 @@ To ensure uniformity, I:
 
 ---
 
+
+### 🧩 Data Model
+
+This project uses a star schema data model in Power BI, with the following dimensions:
+
+- **Year**: Unique dimension present in both dataset.
+- **County, Gender, and Age Bracket**: For slicing driver license trends.
+- **Violation Group and Descripcion Dimension**: Helps to slice Citations trends visuals.
+
+The fact tables are:
+- `Driver Licenses` (cleaned & transformed Excel from 6 PDFs)
+- `Uniform Traffic Citation Report` (merged 5 years of structured PDF data)
+
+These tables were connected using lookup relationships to enable dynamic filtering and drill-downs.
+
+STAR scheme:
+
+<details>
+<img width="562" height="509" alt="image" src="https://github.com/user-attachments/assets/bad50922-4d7e-4550-8e7c-175139317eed" />
+<img width="824" height="396" alt="image" src="https://github.com/user-attachments/assets/0bd5e67d-a433-4c1d-babf-7e0cf6250c8c" />
+</details>
+
+---
+
 #### 🧮 **DAX (Data Analysis Expressions)**
 
-There are in total 19 DAX calculations in this dashboard, I would not like to extend that much the documentation, I just going to dive in the most used calculations and explained them briefly.
+There are in total 19 DAX calculations in this dashboard. To keep this documentation concise, I will focus on the most impactful and frequently used ones.
 
 #### **Driver Licenses Dataset**
 
@@ -110,56 +134,128 @@ There are in total 19 DAX calculations in this dashboard, I would not like to ex
 <img width="349" height="242" alt="image" src="https://github.com/user-attachments/assets/b69137fe-2bc7-4c13-a558-ea219b0832b3" />
 </details>
 
-`Selected Year`: The first two slides were configured to always be inizialized in 2025 because it displays metrics such as `Total Licenses`, or `YoY License Growth`. In both cases is necesary to started with a Filter applied because
-the SUM(`Licenses`) is the sum of all six years, and YoY metric needs to be inizialized in determined year to be able to compare year to year, if not it will display a (blank).
+`Selected Year`: The first two slides were configured to always initialize in 2025 because they display metrics such as `Total Licenses` and `YoY License Growth`. Both require a base year to compare year-over-year values; otherwise, they would return (blank) or misleading aggregates.
 
 <details>
 <img width="1240" height="109" alt="image" src="https://github.com/user-attachments/assets/bf5176f8-e38f-44df-9561-617f6bb4fd14" />
 </details>
 
-
 #### **Traffic Citations Dataset**
-
-`Total Licenses`: Since grand totals from the original dataset were ruled out, to calculate the sum of total licenses we have to make a new measure of the sum of every enforcement department.
-
-<details>
-<img width="407" height="109" alt="image" src="https://github.com/user-attachments/assets/4b22b6d5-3b34-4663-8faf-54d3fdd3eeb3" />
-</details>
 
 <details>
 <img width="356" height="265" alt="image" src="https://github.com/user-attachments/assets/300f97a9-ad6a-44fb-9923-258546178f31" />
 </details>
 
+`Total Citations`: Since grand totals were removed during data cleaning, this measure sums citations reported by each enforcement department.
+
+<details>
+<img width="407" height="109" alt="image" src="https://github.com/user-attachments/assets/4b22b6d5-3b34-4663-8faf-54d3fdd3eeb3" />
+</details>
+
+---
 
 ### 📊 Visualization
----
-
-- Produced a 4-Tabs dashboard using Power BI
-  
 
 ---
 
----
+- Produced a 4-slide interactive dashboard using Power BI
 
 ---
 
+#### Slide 1 (Licenses Overview)
+
+This slide gives a general view of the Driver Licenses dataset. All slides follow a consistent layout: slicers at the top, followed by KPIs. These KPIs provide insights such as `Total Licenses`, `Senior Drivers (%)`, `Teenage Drivers (%)`, and `Year-over-Year License Growth`. Below each KPI card, supporting context is displayed for better interpretability.
+
+It includes:
+- A line chart showing license trends by gender over the years
+- A bar chart showing license volume by age bracket
+- A toggle button to switch between visual and tabular views
+
+<img width="1444" height="810" alt="image" src="https://github.com/user-attachments/assets/c8f5e059-52f6-40f8-bf36-807f7917de34" />
+<img width="1443" height="809" alt="image" src="https://github.com/user-attachments/assets/eec248fb-476b-483e-a038-c74c59b06a5b" />
+
 ---
 
+#### Slide 2 (County View)
 
+This view provides a location-based analysis. Users can explore how different counties compare in terms of total licenses, gender distribution, and growth. It enables regional comparisons and decision-making support for local policy or service optimization.
 
+<img width="1440" height="809" alt="image" src="https://github.com/user-attachments/assets/813a0b13-affe-4d2a-8e46-9c29c3726ede" />
 
 ---
 
-### 💡 Recommendations
+#### Slide 3 (Citations Overview)
+
+This is a general exploration of the Traffic Citations dataset. It includes four KPIs:
+- `Total Citations`
+- `Guilty Outcome Rate`
+- `Total Paid Civil Penalty`
+- `Most Common Violation` and its citation count
+
+Charts included:
+- Bar chart: `Most Cited Violations` (top violation descriptions)
+- Donut chart: Enforcement agency breakdown (FHP, Sheriff, PD, etc.)
+- Bar chart: Total Citations by `Violation Group`
+- Table: Top 1 Violation per Group with totals
+
+<img width="1442" height="809" alt="image" src="https://github.com/user-attachments/assets/a6aca214-d3a0-4fee-9ff5-c63c2665e4a4" />
+
 ---
- 
-- This report enables stakeholders to identify which day of the week has the highest frequency of motor vehicle collisions, supporting more informed decision-making around resource allocation, public safety campaigns, or policy adjustments.
-- Identifying Peak Collision Days: This report helps identify the day of the week with the highest frequency of collisions. Focus awareness campaigns and enforcement on peak days to reduce accidents.
 
-- Yearly Crash Trends: Data can be filtered by year to analyze trends. Use this data to allocate resources effectively, especially during high-crash periods.
+#### Slide 4 (Citations Time-Based)
 
-- Vehicle Type Insights: The dashboard allows filtering by vehicle type. Introduce targeted safety measures for vehicle types with higher collision rates.
+This slide focuses on time-based insights within the citations dataset. KPIs include:
+- `% Growth in Total Citations YoY`
+- `Average Citations YoY`
 
-- Geographic Analysis by Borough: Collisions can be analyzed by borough, supporting localized decisions. Direct resources to high-collision boroughs and evaluate infrastructure improvements in those areas.
+Charts:
+- Line: Behavior of the Most Common Violation over time
+- Line: Citation totals over time (by year)
+- Bar: Outcomes over time (`Guilty`, `Dismissed`, etc.)
+- Line: `Guilty` vs `Dismissed` trend comparison
 
-- Interactive Map for Risk Zones: The map visualizes crash locations and risk zones. Review high-risk areas and collaborate with city planners to improve safety measures at critical intersections.
+<img width="1441" height="809" alt="image" src="https://github.com/user-attachments/assets/0d7b6a89-08e8-4dd6-9ba3-9c77f1836797" />
+
+---
+
+### ⚠️ Data Limitations and Suggestions
+
+- The **Driver Licenses dataset** required significant manual transformation due to inconsistent formatting across years. For better automation and time consistency, maintaining a standardized base format is essential.
+
+- The **Traffic Citations dataset** lacks geographic detail such as county, latitude, or longitude of infractions. Including this information would greatly enhance the ability to cross-analyze both datasets geographically.
+
+- Several **violation outcome labels** like `"Nolle Prosequi"` and `"Adj w/h Judge"` were not self-explanatory and required manual research to interpret, which could affect automation or broader user understanding.
+
+---
+
+#### 📊 Key Trends Identified
+
+- **Licenses Composition**: The most recent report indicates that only 30.27% of licenses belongs to `Senior Drivers` (24.03%) and `Teenagers Drivers` (%), so the gross of licenses are condensed between 21-64 years and charts shows a constant superiority of quantity
+of licenses of females over males over years.
+
+- **Decreasing year**: There is just one year where the `Year-over-Year License Growth` is negative, and it is 2023 vs 2022. With this data we can not make conclutions, but we can investigate or try to understand the context happening in those years.
+
+- **Licensing Concentration**: The highest concentration of issued driver licenses in centered in South Florida, including Miami-Dade, Broward, and Palm Beach.
+
+- **Top Violation: SPD POST ZONE**: This remains the most cited violation across years, highlighting potential areas for improved signage or enforcement calibration.
+
+- **Enforcement Distribution**: The majority of citations are issued by **City Police Departments**, followed by **FHP** and **Sheriff’s Departments**. This reflects resource distribution and possible enforcement gaps.
+
+- **Citations Over Time**: The quantity of citations tends to increase over the years. Being the 2021 vs 2020 the most variant interval, the delta between these years are 20.64%, around 400.000 citations
+
+- **Most Common Court Situation**: Citations tends to finishing up in a `Dismissed` case.
+
+---
+
+#### ✅ Actionable Recommendations
+
+- **Focus Education Campaigns on Most Common Violations**: Direct resources toward educating drivers about top infractions (e.g., SPD POST ZONE) to reduce recurrence.
+
+- **Use Citation Outcome Trends for Judicial Review**: Agencies can assess changes in outcomes (e.g., increasing *Dismissals*) to identify potential inefficiencies or training needs.
+
+- **Support Youth Driver Safety Programs**: Given the rising number of young drivers, it’s advisable to enhance defensive driving initiatives aimed at new licensees.
+
+- **Explore Root Causes Behind Declining Violation Trends**: Understanding why some infractions are dropping could guide effective replication of enforcement strategies.
+
+- **Improve Interdepartmental Coordination**: As enforcement is distributed among multiple agencies, coordinated data-sharing and unified reporting standards could improve efficiency and analysis.
+
