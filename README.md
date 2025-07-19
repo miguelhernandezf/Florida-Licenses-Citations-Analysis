@@ -228,34 +228,35 @@ Charts:
 
 ---
 
-#### 📊 Key Trends Identified
+### 📊 Key Trends Identified
 
-- **Licenses Composition**: The most recent report indicates that only 30.27% of licenses belongs to `Senior Drivers` (24.03%) and `Teenagers Drivers` (%), so the gross of licenses are condensed between 21-64 years and charts shows a constant superiority of quantity
-of licenses of females over males over years.
+- **License Composition**: The most recent report shows that only **30.27%** of licenses belong to **Senior Drivers (24.03%)** and **Teenage Drivers**, meaning the majority of licenses are held by individuals aged **21–64**. The data also shows that **females consistently hold more licenses than males** over the years.
 
-- **Decreasing year**: There is just one year where the `Year-over-Year License Growth` is negative, and it is 2023 vs 2022. With this data we can not make conclutions, but we can investigate or try to understand the context happening in those years.
+- **Year of Decline**: The only year where the `Year-over-Year License Growth` was negative was **2023 vs 2022**. While this doesn’t confirm a long-term trend, it prompts further investigation into economic or demographic changes during that period.
 
-- **Licensing Concentration**: The highest concentration of issued driver licenses in centered in South Florida, including Miami-Dade, Broward, and Palm Beach.
+- **Licensing Concentration**: Driver license issuance is **heavily concentrated in South Florida**, particularly in **Miami-Dade, Broward, and Palm Beach** counties, reflecting population density and urban demand.
 
-- **Top Violation: SPD POST ZONE**: This remains the most cited violation across years, highlighting potential areas for improved signage or enforcement calibration.
+- **Top Violation — SPD POST ZONE**: This continues to be the most cited violation across all years, suggesting either poor speed limit visibility, signage issues, or frequent enforcement focus in these zones.
 
-- **Enforcement Distribution**: The majority of citations are issued by **City Police Departments**, followed by **FHP** and **Sheriff’s Departments**. This reflects resource distribution and possible enforcement gaps.
+- **Enforcement Distribution**: The **City Police Departments** issue the majority of citations, followed by the **Florida Highway Patrol (FHP)** and **Sheriff’s Departments**. This distribution highlights possible variations in local enforcement practices and resource availability.
 
-- **Citations Over Time**: The quantity of citations tends to increase over the years. Being the 2021 vs 2020 the most variant interval, the delta between these years are 20.64%, around 400.000 citations
+- **Citation Volume Over Time**: Citations have shown a general upward trend, with the largest increase occurring between **2020 and 2021**, with a **20.64% jump** (~400,000 more citations).
 
-- **Most Common Court Situation**: Citations tends to finishing up in a `Dismissed` case.
+- **Most Common Legal Outcome**: The most frequent resolution for citations is **Dismissal**, indicating patterns in adjudication or possible inefficiencies in case processing.
 
 ---
 
-#### ✅ Actionable Recommendations
+### ✅ Actionable Recommendations
 
-- **Focus Education Campaigns on Most Common Violations**: Direct resources toward educating drivers about top infractions (e.g., SPD POST ZONE) to reduce recurrence.
+- **Target Educational Campaigns at Common Violations**: Focus awareness initiatives around high-frequency infractions like **SPD POST ZONE** to reduce recurrence through community education and improved signage.
 
-- **Use Citation Outcome Trends for Judicial Review**: Agencies can assess changes in outcomes (e.g., increasing *Dismissals*) to identify potential inefficiencies or training needs.
+- **Leverage South Florida Licensing Density for Resource Allocation**: Since South Florida is the dominating location in terms of volumen of licenses. It would be efficent to increase the FLHSMV 
 
-- **Support Youth Driver Safety Programs**: Given the rising number of young drivers, it’s advisable to enhance defensive driving initiatives aimed at new licensees.
+- **Review Court Outcomes for Policy Insight**: The trend of rising **Dismissals** could indicate areas for judicial or law enforcement training or reveal flaws in citation issuance.
 
-- **Explore Root Causes Behind Declining Violation Trends**: Understanding why some infractions are dropping could guide effective replication of enforcement strategies.
+- **Expand Young Driver Safety Programs**: Given the growing number of **Teenage Drivers**, it’s vital to support pre-licensing education and defensive driving courses aimed at this age group.
 
-- **Improve Interdepartmental Coordination**: As enforcement is distributed among multiple agencies, coordinated data-sharing and unified reporting standards could improve efficiency and analysis.
+- **Analyze Declining Violations for Replicable Strategies**: Investigate why certain violation types are consistently declining and identify enforcement or policy strategies that could be replicated elsewhere.
+
+- **Enhance Agency Coordination**: Since citations are distributed across various enforcement agencies, establishing **standardized reporting and shared data protocols** could enhance both transparency and strategic planning.
 
