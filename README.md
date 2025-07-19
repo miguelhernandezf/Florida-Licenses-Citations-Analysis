@@ -230,7 +230,7 @@ Charts:
 
 ### 📊 Key Trends Identified
 
-- **License Composition**: The most recent report shows that only **30.27%** of licenses belong to **Senior Drivers (24.03%)** and **Teenage Drivers**, meaning the majority of licenses are held by individuals aged **21–64**. The data also shows that **females consistently hold more licenses than males** over the years.
+- **License Composition**: The most recent report shows that only **30.27%** of licenses belong to **Senior Drivers (24.03%)** and **Teenage Drivers  (06.24%)**, meaning the majority of licenses are held by individuals aged **21–64**. The data also shows that **females consistently hold more licenses than males** over the years.
 
 - **Year of Decline**: The only year where the `Year-over-Year License Growth` was negative was **2023 vs 2022**. While this doesn’t confirm a long-term trend, it prompts further investigation into economic or demographic changes during that period.
 
